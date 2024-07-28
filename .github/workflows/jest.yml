@@ -1,0 +1,38 @@
+name: RUN GoRest API Tests CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  RUN-GoRest-user-CRUD-API-Test:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 18.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Installation of related packages
+        run: npm ci
+
+      - name: RUN API Testing
+        run: npm test
+        env:
+            API_BEARER_TOKEN: ${{ secrets.GORESTTOKEN }}
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v3
+        with:
+          name: SuperTest-test-report
+          path: Report
