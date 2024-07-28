@@ -34,6 +34,7 @@
     <Content Include="jest.config.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="Specs\tesstUserUpdate.spec.js" />
     <Content Include="Specs\testUserCreation.spec.js" />
     <Content Include="Specs\testUserDelete.spec.js" />
     <Content Include="Specs\testUserRead.spec.js" />
