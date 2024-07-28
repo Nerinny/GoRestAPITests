@@ -30,14 +30,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Config\config.js" />
+    <Content Include="Helpers\requestHelpers.js" />
     <Content Include="jest.config.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="Specs\test.spec.js" />
     <Content Include="TestData\requestTestData.js" />
+    <Content Include="TestData\responseExpectedData.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Config\" />
+    <Folder Include="Helpers\" />
     <Folder Include="Report\" />
     <Folder Include="TestData\" />
     <Folder Include="Specs\" />
