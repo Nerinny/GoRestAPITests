@@ -17,5 +17,15 @@ module.exports = {
         return request(config.host)
             .get(config.usersAPI + path)
             .auth(process.env.API_BEARER_TOKEN, { type: "bearer" });
+    },
+    userDeleteRequest: function (path = '') {
+        return request(config.host)
+            .get(config.usersAPI + path)
+            .auth(process.env.API_BEARER_TOKEN, { type: "bearer" });
+    },
+    userUnauthorizedDeleteRequest: function (path = '') {
+        return request(config.host)
+            .get(config.usersAPI + path);
     }
+
 };
