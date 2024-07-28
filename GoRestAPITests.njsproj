@@ -34,7 +34,8 @@
     <Content Include="jest.config.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="Specs\test.spec.js" />
+    <Content Include="Specs\testUserCreation.spec.js" />
+    <Content Include="Specs\testUserRead.spec.js" />
     <Content Include="TestData\requestTestData.js" />
     <Content Include="TestData\responseExpectedData.js" />
   </ItemGroup>

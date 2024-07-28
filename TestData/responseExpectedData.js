@@ -19,6 +19,9 @@ module.exports = {
         [{ field: 'email', message: 'has already been taken' }],
 
     unauthorizedUserResponse:
-        { "message": "Authentication failed" }
+        { "message": "Authentication failed" },
+
+    notFoundResourceResponse:
+        { "message": "Resource not found" }
     
 }
